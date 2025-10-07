@@ -2,11 +2,13 @@
   "compilerOptions": {
     // 日本語コメント: Next.js推奨の設定をベースにしつつ厳格な型チェックを維持
     "target": "es5",
+
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -15,6 +17,7 @@
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "moduleResolution": "node",
+
     // 日本語コメント: エイリアスで@から始まるパス解決を可能にする設定
     "baseUrl": ".",
     "paths": {
@@ -23,10 +26,12 @@
         "./*"
       ]
     },
+
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+
     "noEmit": true,
     // 日本語コメント: Next.js独自の型チェックを補完するプラグインを利用
     "plugins": [
@@ -45,4 +50,5 @@
   "exclude": [
     "node_modules"
   ]
+
 }
