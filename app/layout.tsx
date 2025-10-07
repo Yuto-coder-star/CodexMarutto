@@ -7,9 +7,11 @@ import { Zen_Maru_Gothic } from 'next/font/google';
 // 日本語コメント: 丸ゴシックの優しい印象を演出するフォントを読み込み
 const zenMaruGothic = Zen_Maru_Gothic({
   weight: ['400', '500', '700'],
+  
   // 日本語コメント: Google Fontsの提供サブセットに合わせてlatinを指定しつつ、フォールバックで日本語を描画
   subsets: ['latin'],
   display: 'swap',
+
   variable: '--font-zen-maru-gothic'
 });
 
