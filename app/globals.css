@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 日本語コメント: 画面全体の背景グラデーションと滑らかなアニメーションを定義 */
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  @apply bg-gradient-to-br from-sakura-light via-white to-tsumugi-sky dark:from-gray-900 dark:via-slate-900 dark:to-gray-800 text-gray-900 dark:text-gray-100;
+  font-family: var(--font-zen-maru-gothic);
+  transition: background 1s ease, color 0.5s ease;
+  min-height: 100vh;
+}
+
+/* 日本語コメント: スクロールバーの視認性を柔らかく調整 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(249, 168, 212, 0.6);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 日本語コメント: 入力要素のフォーカス演出を統一 */
+input, textarea, button {
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(249, 168, 212, 0.4);
+}
+
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(249, 168, 212, 0.5);
+}
