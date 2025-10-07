@@ -9,10 +9,12 @@ const EMOTIONS = ['happy', 'sad', 'blush', 'neutral'] as const;
 type Emotion = (typeof EMOTIONS)[number];
 
 
+
 // 日本語コメント: OpenAIクライアントを初期化
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
+
 
 
 export async function POST(request: Request) {
