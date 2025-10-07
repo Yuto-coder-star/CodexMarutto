@@ -1,6 +1,9 @@
 /// <reference types="next" />
-/// <reference types="next/types/global" />
-/// <reference types="next/image-types/global" />
 
-// 日本語コメント: このファイルはNext.jsによる型補完のため自動生成が推奨される
-// 注意: 手動で編集しないこと
+/// <reference types="next/image-types/global" />
+/// <reference path="./.next/types/routes.d.ts" />
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
+// 日本語コメント: Next.jsが自動生成する型定義なので手動編集は控えること
+

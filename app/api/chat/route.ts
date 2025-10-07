@@ -8,18 +8,28 @@ const EMOTIONS = ['happy', 'sad', 'blush', 'neutral'] as const;
 
 type Emotion = (typeof EMOTIONS)[number];
 
+
 // 日本語コメント: OpenAIクライアントを初期化
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
+
 export async function POST(request: Request) {
   try {
     const { message, affection } = await request.json();
 
-    if (!process.env.OPENAI_API_KEY) {
+
+    // 日本語コメント: ビルド時エラーを避けるため、APIキー存在確認とクライアント初期化を遅延実行
+    const apiKey = process.env.OPENAI_API_KEY;
+    if (!apiKey) {
       throw new Error('OPENAI_API_KEYが設定されていません');
     }
+
+    const openai = new OpenAI({
+      apiKey
+    });
+
 
     const prompt = `あなたは優しいAI秘書「紬」です。舞台は春の日本、相手は新社会人。必ず以下の形式で応答してください。
 1. 返答冒頭に感情タグを半角で一つ記載 (happy, sad, blush, neutral)。例: [happy]
